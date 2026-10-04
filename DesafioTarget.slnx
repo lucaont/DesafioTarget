@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Desafio1-Comissao/Desafio1-Comissao.csproj" />
   <Project Path="Desafio2-Estoque/Desafio2-Estoque.csproj" />
+  <Project Path="Desafio3-Juros/Desafio3-Juros.csproj" Id="a9f6fe81-0b06-4151-91f6-41ea3efddaa6" />
 </Solution>
