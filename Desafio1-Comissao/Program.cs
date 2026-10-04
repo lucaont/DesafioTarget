@@ -3,7 +3,7 @@ using System.Text.Json;
 
 CultureInfo.CurrentCulture = new CultureInfo("pt-BR");
 
-string json = File.ReadAllText("vendas.json");
+string json = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "vendas.json"));
 
 var opcoes = new JsonSerializerOptions {PropertyNameCaseInsensitive = true};
 var dados = JsonSerializer.Deserialize<DadosVendas>(json, opcoes);
@@ -48,7 +48,7 @@ static decimal CalcularComissao(decimal valor)
 record Venda(string vendedor, decimal valor);
 class DadosVendas
 {
-    public List<Venda> vendas { get; set; }
+    public List<Venda> vendas { get; set; } = new();
 }
 
 class ResumoVendedor

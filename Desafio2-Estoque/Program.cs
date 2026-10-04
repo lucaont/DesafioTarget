@@ -3,7 +3,7 @@ using System.Text.Json;
 
 CultureInfo.CurrentCulture = new CultureInfo("pt-BR");
 
-string json = File.ReadAllText("estoque.json");
+string json = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "estoque.json"));
 var opcoes = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 var dados = JsonSerializer.Deserialize<DadosEstoque>(json, opcoes);
 
